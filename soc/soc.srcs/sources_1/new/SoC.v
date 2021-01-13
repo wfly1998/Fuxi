@@ -1,12 +1,14 @@
 // from https://github.com/trivialmips/nontrivial-mips
 // modified by: MaxXing, 2020-05
+// modified by: Yukiteru, 2021-01
 
 `timescale 1ns / 1ps
 
 `include "iobuf.v"
 
 module SoC(
-  input           clk,
+  input           diff_clk_p,
+  input           diff_clk_n,
   input           rst_n,
   // UART
   input           UART_rxd,
@@ -16,31 +18,18 @@ module SoC(
   inout           SPI_FLASH_miso,
   inout           SPI_FLASH_ss,
   inout           SPI_FLASH_sck,
-  inout           SPI_FLASH_io2,
-  inout           SPI_FLASH_io3,
   // non-plugable CFG SPI flash
   inout           CFG_FLASH_mosi,
   inout           CFG_FLASH_miso,
   inout           CFG_FLASH_ss,
   // VGA (use inout for high-Z output)
-  inout   [3:0]   VGA_r,
-  inout   [3:0]   VGA_g,
-  inout   [3:0]   VGA_b,
+  inout   [5:0]   VGA_r,
+  inout   [5:0]   VGA_g,
+  inout   [5:0]   VGA_b,
   output          VGA_hsync,
   output          VGA_vsync,
-  // GPIO
-  output  [15:0]  led,
-  output  [1:0]   led_rg0,
-  output  [1:0]   led_rg1,
-  output  [7:0]   num_csn,
-  output  [6:0]   num_a_g,
-  output          num_a_g_dp,
-  output  [3:0]   btn_key_col,
-  input   [3:0]   btn_key_row,
-  input   [1:0]   btn_step,
-  input   [7:0]   switch,
   // DDR3
-  inout   [15:0]  DDR3_dq,
+  inout   [31:0]  DDR3_dq,
   output  [12:0]  DDR3_addr,
   output  [2:0]   DDR3_ba,
   output          DDR3_ras_n,
@@ -50,8 +39,8 @@ module SoC(
   output          DDR3_reset_n,
   output          DDR3_cke,
   output  [1:0]   DDR3_dm,
-  inout   [1:0]   DDR3_dqs_p,
-  inout   [1:0]   DDR3_dqs_n,
+  inout   [3:0]   DDR3_dqs_p,
+  inout   [3:0]   DDR3_dqs_n,
   output          DDR3_ck_p,
   output          DDR3_ck_n,
   // ethernet
@@ -63,26 +52,16 @@ module SoC(
   input           MII_rx_clk,
   input           MII_rx_dv,
   input           MII_rx_er,
-  input   [3:0]   MII_rxd,
+  input   [7:0]   MII_rxd,
   input           MII_tx_clk,
   output          MII_tx_en,
   output          MII_tx_er,
-  output  [3:0]   MII_txd,
-  // LCD
-  inout   [15:0]  LCD_data,
-  output          LCD_nrst,
-  output          LCD_csel,
-  output          LCD_rd,
-  output          LCD_rs,
-  output          LCD_wr,
-  output          LCD_lighton
+  output  [7:0]   MII_txd
 );
 
   // plugable SPI flash
   `IOBUF_GEN(SPI_FLASH_mosi, SPI_FLASH_io0)
   `IOBUF_GEN(SPI_FLASH_miso, SPI_FLASH_io1)
-  `IOBUF_GEN_SIMPLE(SPI_FLASH_io2)
-  `IOBUF_GEN_SIMPLE(SPI_FLASH_io3)
   `IOBUF_GEN_SIMPLE(SPI_FLASH_ss)
   `IOBUF_GEN_SIMPLE(SPI_FLASH_sck)
 
@@ -96,18 +75,11 @@ module SoC(
   // not provided in Ethernet Lite
   assign MII_tx_er = 1'b0;
 
-  // GPIO
-  // not provided in confreg IP
-  assign num_a_g_dp = 1'b0;
-
-  // LCD
-  `IOBUF_GEN_VEC(16, LCD_data, LCD_data_tri)
-
   // VGA
   wire [5:0] VGA_red, VGA_green, VGA_blue;
   genvar VGA_i;
   generate
-    for (VGA_i = 0; VGA_i < 4; VGA_i = VGA_i+1) begin : VGA_gen
+    for (VGA_i = 0; VGA_i < 6; VGA_i = VGA_i+1) begin : VGA_gen
       // match on-board DAC built by resistor
       assign VGA_r[VGA_i] = VGA_red[VGA_i+2] ? 1'b1 : 1'bZ;
       assign VGA_g[VGA_i] = VGA_green[VGA_i+2] ? 1'b1 : 1'bZ;
@@ -117,7 +89,8 @@ module SoC(
 
   // initialize block design
   soc soc_inst(
-    .clk              (clk),
+    .diff_clk_clk_p   (diff_clk_p),
+    .diff_clk_clk_n   (diff_clk_n),
     .rst_n            (rst_n),
     // UART
     .UART_txd         (UART_txd),
@@ -133,12 +106,6 @@ module SoC(
     .SPI_FLASH_io1_i  (SPI_FLASH_io1_i),
     .SPI_FLASH_io1_o  (SPI_FLASH_io1_o),
     .SPI_FLASH_io1_t  (SPI_FLASH_io1_t),
-    .SPI_FLASH_io2_i  (SPI_FLASH_io2_i),
-    .SPI_FLASH_io2_o  (SPI_FLASH_io2_o),
-    .SPI_FLASH_io2_t  (SPI_FLASH_io2_t),
-    .SPI_FLASH_io3_i  (SPI_FLASH_io3_i),
-    .SPI_FLASH_io3_o  (SPI_FLASH_io3_o),
-    .SPI_FLASH_io3_t  (SPI_FLASH_io3_t),
     .SPI_FLASH_sck_i  (SPI_FLASH_sck_i),
     .SPI_FLASH_sck_o  (SPI_FLASH_sck_o),
     .SPI_FLASH_sck_t  (SPI_FLASH_sck_t),
@@ -164,16 +131,6 @@ module SoC(
     .VGA_clk          (),
     .VGA_de           (),
     .VGA_dps          (),
-    // GPIO
-    .led              (led),
-    .led_rg0          (led_rg0),
-    .led_rg1          (led_rg1),
-    .num_csn          (num_csn),
-    .num_a_g          (num_a_g),
-    .btn_key_col      (btn_key_col),
-    .btn_key_row      (btn_key_row),
-    .btn_step         (btn_step),
-    .switch           (switch),
     // DDR3
     .DDR3_dq          (DDR3_dq),
     .DDR3_addr        (DDR3_addr),
@@ -204,17 +161,7 @@ module SoC(
     .MII_rxd          (MII_rxd),
     .MII_tx_clk       (MII_tx_clk),
     .MII_tx_en        (MII_tx_en),
-    .MII_txd          (MII_txd),
-    // LCD
-    .LCD_data_tri_i   (LCD_data_tri_i),
-    .LCD_data_tri_o   (LCD_data_tri_o),
-    .LCD_data_tri_t   (LCD_data_tri_t),
-    .LCD_nrst         (LCD_nrst),
-    .LCD_csel         (LCD_csel),
-    .LCD_rd           (LCD_rd),
-    .LCD_rs           (LCD_rs),
-    .LCD_wr           (LCD_wr),
-    .LCD_lighton      (LCD_lighton)
+    .MII_txd          (MII_txd)
   );
 
 endmodule

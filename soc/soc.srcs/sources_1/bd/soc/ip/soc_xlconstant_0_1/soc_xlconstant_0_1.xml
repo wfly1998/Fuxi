@@ -7,22 +7,73 @@
   <spirit:model>
     <spirit:views>
       <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>xlconstant_v1_1_7_xlconstant</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Jan 13 02:13:27 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:d3b26261</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_synthesisconstraints</spirit:name>
+        <spirit:displayName>Synthesis Constraints</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:d3b26261</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
+        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>soc_xlconstant_0_1</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Jan 13 02:13:27 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:d3b26261</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
         <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
         <spirit:displayName>Verilog Simulation</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>xlconstant_v1_1_5_xlconstant</spirit:modelName>
+        <spirit:modelName>xlconstant_v1_1_7_xlconstant</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 08 12:25:34 UTC 2020</spirit:value>
+            <spirit:value>Wed Jan 13 02:13:27 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3ea01a80</spirit:value>
+            <spirit:value>9:8ded528d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31,18 +82,18 @@
         <spirit:displayName>SystemC Simulation</spirit:displayName>
         <spirit:envIdentifier>systemCSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>systemc</spirit:language>
-        <spirit:modelName>xlconstant_v1_1_5</spirit:modelName>
+        <spirit:modelName>xlconstant_v1_1_7</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_systemcsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 08 12:25:41 UTC 2020</spirit:value>
+            <spirit:value>Wed Jan 13 02:13:27 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3ea01a80</spirit:value>
+            <spirit:value>9:8ded528d</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -62,11 +113,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 08 12:25:41 UTC 2020</spirit:value>
+            <spirit:value>Wed Jan 13 02:13:27 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3ea01a80</spirit:value>
+            <spirit:value>9:8ded528d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -82,55 +133,15 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 08 12:25:41 UTC 2020</spirit:value>
+            <spirit:value>Wed Jan 13 02:13:27 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3ea01a80</spirit:value>
+            <spirit:value>9:8ded528d</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
             <spirit:value>tlm</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_verilogsynthesis</spirit:name>
-        <spirit:displayName>Verilog Synthesis</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
-        <spirit:modelName>xlconstant_v1_1_5_xlconstant</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 08 12:25:34 UTC 2020</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7e5ce3f1</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
-        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
-        <spirit:modelName>soc_xlconstant_0_1</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 08 13:28:35 UTC 2020</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7e5ce3f1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -169,18 +180,34 @@
   </spirit:model>
   <spirit:fileSets>
     <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xlconstant_v1_1_7</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/soc_xlconstant_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v</spirit:name>
+        <spirit:name>../../ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>xlconstant_v1_1_5</spirit:logicalName>
+        <spirit:logicalName>xlconstant_v1_1_7</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_systemcsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>sim/xlconstant_v1_1_5.h</spirit:name>
+        <spirit:name>sim/xlconstant_v1_1_7.h</spirit:name>
         <spirit:fileType>systemCSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
@@ -200,21 +227,13 @@
         <spirit:fileType>systemCSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xlconstant_v1_1_5</spirit:logicalName>
+        <spirit:name>sim/soc_xlconstant_0_1.cpp</spirit:name>
+        <spirit:fileType>systemCSource</spirit:fileType>
       </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>synth/soc_xlconstant_0_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+        <spirit:name>sim/soc_xlconstant_0_1_stub.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
@@ -238,11 +257,11 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>Constant</xilinx:displayName>
-      <xilinx:coreRevision>5</xilinx:coreRevision>
+      <xilinx:coreRevision>7</xilinx:coreRevision>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="224ff974"/>
+      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ea82c910"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="905deaa3"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="0fa77f35"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="f74432fe"/>

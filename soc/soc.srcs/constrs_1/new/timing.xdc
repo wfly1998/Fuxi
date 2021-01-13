@@ -28,13 +28,3 @@ set_input_delay -clock MII_rx_clk -min 10  [get_ports [list MII_rx_dv  MII_rx_er
 set_input_delay -clock MII_rx_clk -max [expr 40-10]  [get_ports [list MII_rx_dv  MII_rx_er MII_rxd*]]
 set_output_delay -clock MII_tx_clk -min 0  [get_ports [list MII_tx_en  MII_txd*]]
 set_output_delay -clock MII_tx_clk -max 12  [get_ports [list MII_tx_en  MII_txd*]]
-
-
-# GPIO
-set periph_clk clk_peripheral_soc_clk_wiz_0_0
-
-set_output_delay 0 -clock $periph_clk [get_ports [list num_* led* UART_txd MII_rst_n DDR3_reset_n]]
-set_false_path -to [get_ports [list num_* led* btn* switch* UART_txd MII_rst_n DDR3_reset_n]]
-
-set_input_delay 0 -clock $periph_clk [get_ports [list btn_key_row* btn_step* switch* rst_n UART_rxd]]
-set_false_path -from [get_ports [list btn* switch* rst_n UART_rxd]]
