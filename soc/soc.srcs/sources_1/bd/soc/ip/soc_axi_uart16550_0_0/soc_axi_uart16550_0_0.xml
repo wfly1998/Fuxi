@@ -64,7 +64,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ACLK.FREQ_HZ">200000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ACLK.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -308,7 +308,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">200000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1608,11 +1608,11 @@ In FIFO mode, Transmitter FIFO and shift register are both empty.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 02:13:41 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 11:59:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3c0f50c</spirit:value>
+            <spirit:value>9:3e4fc1e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1623,7 +1623,7 @@ In FIFO mode, Transmitter FIFO and shift register are both empty.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3c0f50c</spirit:value>
+            <spirit:value>9:3e4fc1e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1639,11 +1639,11 @@ In FIFO mode, Transmitter FIFO and shift register are both empty.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 03:02:49 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 11:59:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3c0f50c</spirit:value>
+            <spirit:value>9:3e4fc1e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1671,11 +1671,11 @@ In FIFO mode, Transmitter FIFO and shift register are both empty.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 02:13:41 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 11:59:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2664f30d</spirit:value>
+            <spirit:value>9:49dbb31a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1691,11 +1691,11 @@ In FIFO mode, Transmitter FIFO and shift register are both empty.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 03:02:49 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 11:59:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2664f30d</spirit:value>
+            <spirit:value>9:49dbb31a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1709,11 +1709,11 @@ In FIFO mode, Transmitter FIFO and shift register are both empty.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 03:02:49 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 11:59:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3c0f50c</spirit:value>
+            <spirit:value>9:3e4fc1e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1727,11 +1727,11 @@ In FIFO mode, Transmitter FIFO and shift register are both empty.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 03:05:41 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 12:03:58 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3c0f50c</spirit:value>
+            <spirit:value>9:3e4fc1e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2455,7 +2455,7 @@ In FIFO mode, Transmitter FIFO and shift register are both empty.
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_ACLK_FREQ_HZ</spirit:name>
         <spirit:displayName>AXI CLK Frequency</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_ACLK_FREQ_HZ">200000000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_ACLK_FREQ_HZ">100000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_ADDR_WIDTH</spirit:name>
@@ -2756,13 +2756,13 @@ In FIFO mode, Transmitter FIFO and shift register are both empty.
       <spirit:name>C_S_AXI_ACLK_FREQ_HZ_d</spirit:name>
       <spirit:displayName>AXI CLK Frequency</spirit:displayName>
       <spirit:description>AXI4-Lite clock frequency range should be in between 25 to 300MHz.</spirit:description>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_ACLK_FREQ_HZ_d" spirit:order="1399" spirit:minimum="25" spirit:maximum="300">200.0</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_ACLK_FREQ_HZ_d" spirit:order="1399" spirit:minimum="25" spirit:maximum="300">100.0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_S_AXI_ACLK_FREQ_HZ</spirit:name>
       <spirit:displayName>AXI CLK Frequency</spirit:displayName>
       <spirit:description>AXI4-Lite clock frequency range should be in between 25 to 300MHz.</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_ACLK_FREQ_HZ" spirit:order="1400">200000000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_ACLK_FREQ_HZ" spirit:order="1400">100000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>

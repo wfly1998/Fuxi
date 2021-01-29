@@ -30,7 +30,7 @@ module SoC(
   output          VGA_vsync,
   // DDR3
   inout   [31:0]  DDR3_dq,
-  output  [12:0]  DDR3_addr,
+  output  [14:0]  DDR3_addr,
   output  [2:0]   DDR3_ba,
   output          DDR3_ras_n,
   output          DDR3_cas_n,
@@ -38,11 +38,12 @@ module SoC(
   output          DDR3_odt,
   output          DDR3_reset_n,
   output          DDR3_cke,
-  output  [1:0]   DDR3_dm,
+  output  [3:0]   DDR3_dm,
   inout   [3:0]   DDR3_dqs_p,
   inout   [3:0]   DDR3_dqs_n,
   output          DDR3_ck_p,
   output          DDR3_ck_n,
+  output          DDR3_cs_n,
   // ethernet
   output          MDIO_mdc,
   inout           MDIO_mdio,
@@ -146,6 +147,7 @@ module SoC(
     .DDR3_dqs_n       (DDR3_dqs_n),
     .DDR3_ck_p        (DDR3_ck_p),
     .DDR3_ck_n        (DDR3_ck_n),
+    .DDR3_cs_n        (DDR3_cs_n),
     // ethernet
     // .MII_tx_er is not connected
     .MDIO_mdc         (MDIO_mdc),

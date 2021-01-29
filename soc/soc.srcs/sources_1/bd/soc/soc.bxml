@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="soc" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1610506973"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1610506973"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1610506973"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1610506973"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1611921568"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1611921568"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1611921568"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1611921568"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/soc_clk_wiz_0_0/soc_clk_wiz_0_0.xci" Type="IP">
         <Instance HierarchyPath="clk_gen"/>
@@ -159,14 +159,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/soc_mig_7series_0_0/soc_mig_7series_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ddr_controller"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip/soc_axi_uart16550_0_0/soc_axi_uart16550_0_0.xci" Type="IP">
         <Instance HierarchyPath="uart_controller"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -177,14 +169,6 @@
       </File>
       <File Name="ip/soc_axi_ethernetlite_0_0/soc_axi_ethernetlite_0_0.xci" Type="IP">
         <Instance HierarchyPath="ethernet_controller"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/soc_system_ila_0_0/soc_system_ila_0_0.xci" Type="IP">
-        <Instance HierarchyPath="peripheral_ila"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -223,15 +207,20 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="synth/soc.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip/soc_system_ila_0_0/soc_system_ila_0_0.xci" Type="IP">
+        <Instance HierarchyPath="system_ila_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="sim/soc.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip/soc_mig_7series_0_1/soc_mig_7series_0_1.xci" Type="IP">
+        <Instance HierarchyPath="ddr_controller"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/soc_auto_us_cc_df_0/soc_auto_us_cc_df_0.xci" Type="IP">
@@ -266,7 +255,31 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/soc_s00_data_fifo_50/soc_s00_data_fifo_50.xci" Type="IP">
+      <File Name="ip/soc_s00_mmu_0/soc_s00_mmu_0.xci" Type="IP">
+        <Instance HierarchyPath="sys_bus/s00_mmu"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/soc_s01_mmu_0/soc_s01_mmu_0.xci" Type="IP">
+        <Instance HierarchyPath="sys_bus/s01_mmu"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/soc_s02_mmu_0/soc_s02_mmu_0.xci" Type="IP">
+        <Instance HierarchyPath="sys_bus/s02_mmu"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/soc_s00_data_fifo_158/soc_s00_data_fifo_158.xci" Type="IP">
         <Instance HierarchyPath="peri_bus/s00_couplers/s00_data_fifo"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -370,7 +383,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/soc_s00_data_fifo_51/soc_s00_data_fifo_51.xci" Type="IP">
+      <File Name="ip/soc_s00_data_fifo_159/soc_s00_data_fifo_159.xci" Type="IP">
         <Instance HierarchyPath="mem_bus/s00_couplers/s00_data_fifo"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -392,6 +405,25 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/soc_s01_mmu_1/soc_s01_mmu_1.xci" Type="IP">
+        <Instance HierarchyPath="mem_bus/s01_mmu"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="synth/soc.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim/soc.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="soc_ooc.xdc" Type="XDC">

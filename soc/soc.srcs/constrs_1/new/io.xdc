@@ -2,6 +2,8 @@
 set_property IOSTANDARD DIFF_SSTL15 [get_ports diff_clk_*]
 set_property PACKAGE_PIN R4 [get_ports diff_clk_p]
 set_property PACKAGE_PIN T4 [get_ports diff_clk_n]
+# set_property PACKAGE_PIN F6 [get_ports diff_clk_p]
+# set_property PACKAGE_PIN E6 [get_ports diff_clk_n]
 set_property CLOCK_DEDICATED_ROUTE BACKBONE [get_nets diff_clk_*]
 
 # RESET

@@ -283,7 +283,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">200000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -572,7 +572,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ">200000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1378,11 +1378,11 @@ Setting this bit and status bit configures the new Ethernet MAC address for the 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 03:02:49 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 11:59:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cb7f1dfb</spirit:value>
+            <spirit:value>9:b6087d3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1393,7 +1393,7 @@ Setting this bit and status bit configures the new Ethernet MAC address for the 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cb7f1dfb</spirit:value>
+            <spirit:value>9:b6087d3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1409,11 +1409,11 @@ Setting this bit and status bit configures the new Ethernet MAC address for the 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 03:02:49 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 11:59:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cb7f1dfb</spirit:value>
+            <spirit:value>9:b6087d3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1447,11 +1447,11 @@ Setting this bit and status bit configures the new Ethernet MAC address for the 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 02:13:41 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 11:59:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f960b86f</spirit:value>
+            <spirit:value>9:c5578075</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1467,11 +1467,11 @@ Setting this bit and status bit configures the new Ethernet MAC address for the 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 03:02:49 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 11:59:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f960b86f</spirit:value>
+            <spirit:value>9:c5578075</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1485,11 +1485,11 @@ Setting this bit and status bit configures the new Ethernet MAC address for the 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 03:02:49 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 11:59:03 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cb7f1dfb</spirit:value>
+            <spirit:value>9:b6087d3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1503,11 +1503,11 @@ Setting this bit and status bit configures the new Ethernet MAC address for the 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 13 03:06:38 UTC 2021</spirit:value>
+            <spirit:value>Fri Jan 29 12:04:45 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cb7f1dfb</spirit:value>
+            <spirit:value>9:b6087d3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2401,7 +2401,7 @@ Setting this bit and status bit configures the new Ethernet MAC address for the 
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_ACLK_PERIOD_PS</spirit:name>
         <spirit:displayName>AXI clock Period (in ps)</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_ACLK_PERIOD_PS">5000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_ACLK_PERIOD_PS">10000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_ADDR_WIDTH</spirit:name>
@@ -2894,7 +2894,7 @@ Setting this bit and status bit configures the new Ethernet MAC address for the 
       <spirit:name>AXI_ACLK_FREQ_MHZ</spirit:name>
       <spirit:displayName>AXI Clock Frequency (in MHz)</spirit:displayName>
       <spirit:description>The AXI4 clock frequency must be greater than or equal to 100 MHz for 100 Mb/s Ethernet operation and greater than or equal to 10 MHz for 10 Mb/s Ethernet operation.</spirit:description>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.AXI_ACLK_FREQ_MHZ" spirit:order="1900" spirit:minimum="10.0" spirit:maximum="500.0">200.0</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.AXI_ACLK_FREQ_MHZ" spirit:order="1900" spirit:minimum="10.0" spirit:maximum="500.0">100.0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
