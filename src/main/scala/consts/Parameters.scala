@@ -23,7 +23,7 @@ object Parameters {
   val BTB_SIZE          = 1 << BTB_INDEX_WIDTH
 
   // exception
-  val RESET_PC  = "h00000200".U(ADDR_WIDTH.W)
+  val RESET_PC  = "h00001000".U(ADDR_WIDTH.W)
 
   // TLB
   val ITLB_WIDTH  = 4                 // 2^4 = 16 entries
