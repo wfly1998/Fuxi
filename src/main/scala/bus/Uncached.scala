@@ -21,7 +21,8 @@ class Uncached extends Module {
 
   // states of finite state machine
   val (sIdle :: sReadAddr :: sReadData ::
-       sWriteAddr :: sWriteData :: sEnd :: Nil) = Enum(6)
+       sWriteAddr :: sWriteData ::
+       sReadEnd :: sWriteEnd :: Nil) = Enum(7)
   val state = RegInit(sIdle)
 
   // AXI control
@@ -46,7 +47,7 @@ class Uncached extends Module {
     is (sReadData) {
       when (rvalid) {
         rdata := io.axi.readData.bits.data
-        state := sEnd
+        state := sReadEnd
       }
     }
     is (sWriteAddr) {
@@ -57,16 +58,19 @@ class Uncached extends Module {
     is (sWriteData) {
       wen := io.axi.writeData.ready && !io.axi.writeData.bits.last
       when (io.axi.writeData.bits.last) {
-        state := sEnd
+        state := sWriteEnd
       }
     }
-    is (sEnd) {
+    is (sReadEnd) {
+      state := sIdle
+    }
+    is (sWriteEnd) {
       state := sIdle
     }
   }
 
   // SRAM signals
-  io.sram.valid := state === sEnd || rvalid
+  io.sram.valid := state === sWriteEnd || rvalid
   io.sram.fault := false.B
   io.sram.rdata := rdata
 
@@ -75,6 +79,7 @@ class Uncached extends Module {
   io.axi.readAddr.valid       := arvalid
   io.axi.readAddr.bits.addr   := io.sram.addr
   io.axi.readAddr.bits.size   := dataSize.U
+  io.axi.readAddr.bits.burst  := 1.U
   io.axi.readData.ready       := true.B
   io.axi.writeAddr.valid      := awvalid
   io.axi.writeAddr.bits.addr  := io.sram.addr
