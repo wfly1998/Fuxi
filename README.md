@@ -22,6 +22,7 @@ Fuxi processor is designed for running [GeeOS](https://github.com/MaxXSoft/GeeOS
 
 * Memory privilege in `mstatus` register: `MPRV` bit and `MXR` bit are hardwired to 0.
 * Virtualization support in `mstatus` register: `TVM` bit, `TW` bit and `TSR` bit are hardwired to 0.
+* Physical Memory Protection: all PMP registers are hardwired to 0.
 
 ## Performance
 
@@ -98,3 +99,5 @@ All of the unit test cases currently contained in this repository can only test 
 ## Copyright and License
 
 Copyright (C) 2010-2020 MaxXing. License GPLv3.
+
+Special thanks to [@Yukiteru Lee](https://github.com/wfly1998/).

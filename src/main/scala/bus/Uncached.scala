@@ -20,8 +20,7 @@ class Uncached extends Module {
   val dataSize = log2Ceil(DATA_WIDTH / 8)
 
   // states of finite state machine
-  val (sIdle :: sReadAddr :: sReadData ::
-       sWriteAddr :: sWriteData ::
+  val (sIdle :: sReadAddr :: sReadData :: sWriteAddr :: sWriteData ::
        sReadEnd :: sWriteEnd :: Nil) = Enum(7)
   val state = RegInit(sIdle)
 
@@ -79,7 +78,7 @@ class Uncached extends Module {
   io.axi.readAddr.valid       := arvalid
   io.axi.readAddr.bits.addr   := io.sram.addr
   io.axi.readAddr.bits.size   := dataSize.U
-  io.axi.readAddr.bits.burst  := 1.U
+  io.axi.readAddr.bits.burst  := 1.U          // incrementing-address
   io.axi.readData.ready       := true.B
   io.axi.writeAddr.valid      := awvalid
   io.axi.writeAddr.bits.addr  := io.sram.addr
